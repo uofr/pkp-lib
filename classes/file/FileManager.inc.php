@@ -234,8 +234,15 @@ class FileManager {
 		$result = null;
 		if (HookRegistry::call('FileManager::downloadFile', array(&$filePath, &$type, &$inline, &$result))) return $result;
 		if (is_readable($filePath)) {
+
+				//cunnintr - hacking
+                                $path_parts = pathinfo($filePath);
+                                if ($path_parts['extension']=='css') $type = 'text/css';
+				//die('mime-type:'.$type);                        
+				// end hacking 
+
 			if ($type == null) {
-				$type = String::mime_content_type($filePath);
+				$type = String::mime_content_type($filePath);	
 				if (empty($type)) $type = 'application/octet-stream';
 			}
 

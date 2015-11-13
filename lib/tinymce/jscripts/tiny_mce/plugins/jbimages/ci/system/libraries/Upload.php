@@ -1118,6 +1118,9 @@ class CI_Upload {
 		if (function_exists('mime_content_type'))
 		{
 			$this->file_type = @mime_content_type($file['tmp_name']);
+			//bug fix - older versions that rely on mime_content_type incorrectly return png as text/plain
+			if ($this->file_type == 'text/plain' && $file['type'] == 'image/png') $this->file_type = $file['type'];
+			//end bug fix
 			if (strlen($this->file_type) > 0) // It's possible that mime_content_type() returns FALSE or an empty string
 			{
 				return;

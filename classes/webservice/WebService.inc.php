@@ -3,8 +3,8 @@
 /**
  * @file classes/citation/WebService.inc.php
  *
- * Copyright (c) 2013-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class WebService
@@ -126,6 +126,14 @@ class WebService {
 		foreach($webServiceRequest->getHeaders() as $header => $content) {
 			$headers[] = $header . ': ' . $content;
 		}
+		$useProxySettings = $webServiceRequest->getUseProxySettings();
+		if ($useProxySettings && $httpProxyHost = Config::getVar('proxy', 'http_host')) {
+			curl_setopt($ch, CURLOPT_PROXY, $httpProxyHost);
+			curl_setopt($ch, CURLOPT_PROXYPORT, Config::getVar('proxy', 'http_port', '80'));
+			if ($username = Config::getVar('proxy', 'username')) {
+				curl_setopt($ch, CURLOPT_PROXYUSERPWD, $username . ':' . Config::getVar('proxy', 'password'));
+			}
+		}
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		if ($usePut) {
@@ -192,6 +200,14 @@ class WebService {
 		$headers = $this->_buildHeaders($webServiceRequest);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$useProxySettings = $webServiceRequest->getUseProxySettings();
+		if ($useProxySettings && $httpProxyHost = Config::getVar('proxy', 'http_host')) {
+			curl_setopt($ch, CURLOPT_PROXY, $httpProxyHost);
+			curl_setopt($ch, CURLOPT_PROXYPORT, Config::getVar('proxy', 'http_port', '80'));
+			if ($username = Config::getVar('proxy', 'username')) {
+				curl_setopt($ch, CURLOPT_PROXYUSERPWD, $username . ':' . Config::getVar('proxy', 'password'));
+			}
+		}
 
 		// Set up basic authentication if required.
 		$this->_authenticateRequest($ch);

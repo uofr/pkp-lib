@@ -4,15 +4,15 @@
 <!--
   * locale/it_IT/submission.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
   *
   -->
 
-<locale name="it_IT" full_name = "Italiano">
+<locale name="it_IT" full_name="Italiano">
 	<message key="submission.abstractViews">Viste dell'abstract</message>
 	<message key="submission.accepted">Accetta</message>
 	<message key="submission.acknowledge">Ringraziamenti</message>

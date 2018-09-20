@@ -4,15 +4,15 @@
 <!--
   * locale/vi_VN/admin.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   -->
 
-<locale name="vi_VN" full_name = "Tiếng Việt">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="admin.adminFunctions">Các chức năng quản trị</message>
 	<message key="admin.auth.confirmDelete">Quý vị có chắc chắn muốn xóa vĩnh viễn nguồn xác thực này?</message>
 	<message key="admin.auth.create">Tạo nguồn xác thực quyền truy cập</message>

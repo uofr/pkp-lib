@@ -4,15 +4,15 @@
 <!--
   * locale/no_NO/installer.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the no_NO (Norsk) locale.
   *
   -->
 
-<locale name="no_NO" full_name = "Norwegian">
+<locale name="no_NO" full_name="Norsk">
 	<message key="installer.additionalLocales">Flere lokalinnstillinger</message>
 	<message key="installer.administratorAccount">Administratorkonto</message>
 	<message key="installer.administratorAccountInstructions">Denne brukerkontoen kommer til å bli nettstedsadministrator, vil ha full tilgang til systemet. Flere brukerkontoer kan opprettes etter installasjon.</message>
@@ -52,7 +52,7 @@
 	<message key="installer.form.separateMultiple">Skill multiple verdier med komma</message>
 	<message key="installer.form.usernameAlphaNumeric">Administrator-brukernavnet kan bare inneholde alfanumeriske tegn, understrek og bindestrek, og må begynne og slutte med et alfanumerisk tegn.</message>
 	<message key="installer.form.usernameRequired">Et brukernavn for administratorkontoen er påkrevet.</message>
-	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>ADVARSEL: din nåværende PHP-versjon tilfredsstiller ikke minstekravene for installasjonen. Du bør oppgradere til en nyere utgave av PHP.</strong>]]></message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br /><strong>ADVARSEL: din nåværende PHP-versjon tilfredsstiller ikke minstekravene for installasjonen. Du bør oppgradere til en nyere utgave av PHP.</strong>]]></message>
 	<message key="installer.installErrorsOccurred">Det oppsto feil under installasjon</message>
 	<message key="installer.installerSQLStatements">SQL -setninger for installasjon</message>
 	<message key="installer.installFileError"><![CDATA[Installasjonsfilen <tt>dbscripts/xml/install.xml</tt> finnes ikke eller er ikke lesbar.]]></message>

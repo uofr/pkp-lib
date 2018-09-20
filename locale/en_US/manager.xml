@@ -4,15 +4,15 @@
 <!--
   * locale/en_US/manager.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the en_US (English) locale.
   *
   -->
 
-<locale name="en_US" full_name = "English">
+<locale name="en_US" full_name="English">
 	<message key="manager.announcements">Announcements</message>
 	<message key="manager.announcements.confirmDelete">Are you sure you want to permanently delete this announcement?</message>
 	<message key="manager.announcements.create">Create New Announcement</message>

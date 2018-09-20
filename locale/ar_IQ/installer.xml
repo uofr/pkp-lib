@@ -4,15 +4,15 @@
 <!--
   * locale/ar_IQ/installer.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ar_IQ (العربية) locale.
   *
   -->
 
-<locale name="ar_IQ" full_name = "العربية">
+<locale name="ar_IQ" full_name="العربية">
 	<message key="installer.additionalLocales">لغات إضافية</message>
 	<message key="installer.administratorAccount">حساب المشرف الإداري</message>
 	<message key="installer.administratorAccountInstructions">حساب هذا المستخدم سيكون بمثابة المشرف الإداري الذي ستكون له حرية الوصول الكاملة للنظام. المزيد من حسابات المستخدمين يمكن إنشاؤها بعد إكمال التنصيب.</message>
@@ -52,7 +52,7 @@
 	<message key="installer.form.separateMultiple">إفصل بين الكلمات المتعددة بفوارز إنجليزية</message>
 	<message key="installer.form.usernameAlphaNumeric">اسم الدخول للمشرف الإداري يمكن أن يتضمن حروفاً وأرقاماً، خطوط تحتانية، وشُرط، وينبغي أن يبدأ وينتهي بحرف أو رقم حصراً.</message>
 	<message key="installer.form.usernameRequired">ينبغي إدخال اسم الدخول للمشرف الإداري حتماً.</message>
-	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>تحذير: نسختك من برنامج PHP لا تلبي متطلبات الحد الأدنى المطلوبة للتنصيب. ننصح بترقيتها إلى نسخة أحدث تتوافق مع متطلبات تشغيل النظام.</strong>]]></message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br /><strong>تحذير: نسختك من برنامج PHP لا تلبي متطلبات الحد الأدنى المطلوبة للتنصيب. ننصح بترقيتها إلى نسخة أحدث تتوافق مع متطلبات تشغيل النظام.</strong>]]></message>
 	<message key="installer.installErrorsOccurred">حدثت أخطاء خلال عملية التنصيب</message>
 	<message key="installer.installerSQLStatements">عبارات SQL للتنصيب</message>
 	<message key="installer.installFileError"><![CDATA[ملف التنصيب <tt>dbscripts/xml/install.xml</tt> مفقود أو تتعذر قراءته.]]></message>
@@ -69,4 +69,7 @@
 	<message key="installer.publicFilesDirError">حافظة الملفات العمومية غير موجودة أو أنها لا تقبل الكتابة عليها.</message>
 	<message key="installer.releaseNotes">ملاحظات الإطلاق</message>
 	<message key="installer.securitySettings">إعدادات الأمان</message>
+    <message key="installer.beacon">المرشد</message>
+    <message key="installer.beacon.enable">زود الموقع برمز تعريفي فريد ورابط أساسي لـ OAI فقط لأغراض إحصائية وما يتعلق بإشعارات الأمان لمشروع المعرفة العامة.</message>
+
 </locale>

@@ -3,8 +3,8 @@
 /**
  * @file tests/classes/validation/ValidatorORCIDTest.inc.php
  *
- * Copyright (c) 2013-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ValidatorORCIDTest
@@ -26,8 +26,10 @@ class ValidatorORCIDTest extends PKPTestCase {
 	 */
 	public function testValidatorORCID() {
 		$validator = new ValidatorORCID();
-		self::assertTrue($validator->isValid('http://orcid.org/0000-0002-1825-0097')); // Valid
-		self::assertTrue($validator->isValid('http://orcid.org/0000-0002-1694-233X')); // Valid, with an X in the last line
+		self::assertTrue($validator->isValid('http://orcid.org/0000-0002-1825-0097')); // Valid (http)
+		self::assertTrue($validator->isValid('https://orcid.org/0000-0002-1825-0097')); // Valid (https)
+		self::assertFalse($validator->isValid('ftp://orcid.org/0000-0002-1825-0097')); // Invalid (FTP scheme)
+		self::assertTrue($validator->isValid('http://orcid.org/0000-0002-1694-233X')); // Valid, with an X in the last digit
 		self::assertFalse($validator->isValid('0000-0002-1694-233X')); // Missing URI component
 		self::assertFalse($validator->isValid('000000021694233X')); // Missing dashes, URI component
 		self::assertFalse($validator->isValid('http://orcid.org/000000021694233X')); // Missing dashes

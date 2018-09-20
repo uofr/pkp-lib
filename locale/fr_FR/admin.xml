@@ -4,15 +4,15 @@
 <!--
   * locale/fr_FR/admin.xml
   *
-  * Copyright (c) 2000-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2000-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_FR (Français (France)) locale.
   *
   -->
 
-<locale name="fr_FR" full_name = "Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="admin.adminFunctions">Fonctions administratives</message>
 	<message key="admin.auth.confirmDelete">Êtes-vous certain de vouloir supprimer définitivement cette source d'authentification?</message>
 	<message key="admin.auth.create">Créer une source d'authentification</message>

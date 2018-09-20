@@ -4,15 +4,15 @@
 <!--
   * locale/it_IT/user.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the it_IT (Italiano) locale.
   *
   -->
 
-<locale name="it_IT" full_name = "Italiano">
+<locale name="it_IT" full_name="Italiano">
 	<message key="user.affiliation">Affiliazione</message>
 	<message key="user.affiliations">Affiliazioni</message>
 	<message key="user.biography">Note biografiche</message>
@@ -37,6 +37,7 @@
 	<message key="user.login.activate">Attiva l'account</message>
 	<message key="user.login.activated">Grazie per aver attivato il tuo account. Ora puoi effettuare il log in usando le credenziali  che hai fornito quando hai creato il tuo account.</message>
 	<message key="user.login.changePasswordInstructions"><![CDATA[Devi scegliere una nuova password prima di entrare in questo sito.<br /><br />Inserisci sotto il tuo username e la tua password attuale e  la nuova password che vuoi utilizzare.]]></message>
+	<message key="user.login.changePasswordInstructionsOneStep"><![CDATA[You must choose a new password before you can log in to this site.<br /><br />Please enter your username and your new password below to change the password for your account.]]></message>
 	<message key="user.login.forgotPassword">Password dimenticata?</message>
 	<message key="user.login.loginError">Username o password non valida. Riprova.</message>
 	<message key="user.login">Entra</message>
@@ -47,6 +48,9 @@
 	<message key="user.login.registeredEmail">Email dell'utente registrato</message>
 	<message key="user.login.rememberUsernameAndPassword">Ricordami</message>
 	<message key="user.login.resetPassword">Reimposta la password</message>
+	<message key="user.login.implicitAuth">Autenticazione Shibboleth</message>
+	<message key="user.login.implicitAuthLogin">Autenticati con Shibboleth</message>
+	<message key="user.login.localAuth">Login (locale)</message>
 	<message key="user.logOut">Esci</message>
 	<message key="user.mailingAddress">Indirizzo postale</message>
 	<message key="user.masculine">M</message>
@@ -104,7 +108,7 @@
 	<message key="user.profile.form.profileImageInvalid">Formato non valido o immagine troppo grande. I formati accettati sono .gif, .jpg, or .png, e le immagini devono essere grandi 150x150 pixel al massimo.</message>
 	<message key="user.profile.form.affiliationRequired">Inserisci un'affiliazione</message>
 	<message key="user.register.form.emailsDoNotMatch">Le email inserite non corrispondono.</message>
-	<message key="user.affiliation.description"><![CDATA[(La tua istituzione, es. "Universit&#224; La Sapienza di Roma")]]></message>
+	<message key="user.affiliation.description"><![CDATA[(La tua istituzione, es. "Università La Sapienza di Roma")]]></message>
 	<message key="user.confirmEmail">Ripeti l'email</message>
 	<message key="user.gossip">Note private</message>
 	<message key="user.repeatPassword">Ripeti la password</message>

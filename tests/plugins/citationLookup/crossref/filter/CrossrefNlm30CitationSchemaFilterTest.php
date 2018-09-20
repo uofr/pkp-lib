@@ -7,8 +7,8 @@
 /**
  * @file tests/plugins/citationLookup/crossref/filter/CrossrefNlm30CitationSchemaFilterTest.inc.php
  *
- * Copyright (c) 2013-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class CrossrefNlm30CitationSchemaFilterTest
@@ -31,6 +31,8 @@ class CrossrefNlm30CitationSchemaFilterTest extends Nlm30CitationSchemaFilterTes
 	 * @covers CrossrefNlm30CitationSchemaFilter
 	 */
 	public function testExecuteWithDoi() {
+		$this->markTestSkipped('Disabled because of apparent API volume limits.');
+
 		// Test article DOI lookup
 		$articleTest = array(
 			'testInput' => array(
@@ -42,7 +44,7 @@ class CrossrefNlm30CitationSchemaFilterTest extends Nlm30CitationSchemaFilterTes
 				'volume' => '5',
 				'date' => '2004',
 				'fpage' => 147,
-				'uri' => 'http://www.biomedcentral.com/1471-2105/5/147',
+				'uri' => 'http://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-5-147',
 				'person-group[@person-group-type="author"]' => array (
 					array ('given-names' => array('Hao'), 'surname' => 'Chen'),
 					array ('given-names' => array('Burt', 'M'), 'surname' => 'Sharp')
@@ -114,6 +116,8 @@ class CrossrefNlm30CitationSchemaFilterTest extends Nlm30CitationSchemaFilterTes
 	 * @covers CrossrefNlm30CitationSchemaFilter
 	 */
 	public function testExecuteWithOpenurl10Search() {
+		$this->markTestSkipped('Disabled because of apparent API volume limits.');
+
 		// Build the test citations array
 		$citationFilterTests = array(
 			array(
@@ -133,7 +137,7 @@ class CrossrefNlm30CitationSchemaFilterTest extends Nlm30CitationSchemaFilterTes
 					'volume' => '5',
 					'date' => '2004',
 					'fpage' => 147,
-					'uri' => 'http://www.biomedcentral.com/1471-2105/5/147',
+					'uri' => 'http://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-5-147',
 					'issn[@pub-type="ppub"]' => '14712105',
 					'person-group[@person-group-type="author"]' => array (
 						array ('given-names' => array('Hao'), 'surname' => 'Chen'),

@@ -1,8 +1,8 @@
 {**
  * templates/install/install.tpl
  *
- * Copyright (c) 2013-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Installation form.
@@ -85,7 +85,7 @@ function doSubmit() {
 			{/foreach}
 			<span class="instruct">{translate key="installer.additionalLocalesInstructions"}</span>
 			{if $incompleteLocaleFound}
-				<br/>
+				<br />
 				<span class="pkp_form_error">*</span>&nbsp;{translate key="installer.locale.maybeIncomplete"}
 			{/if}{* $incompleteLocaleFound *}
 		</td>

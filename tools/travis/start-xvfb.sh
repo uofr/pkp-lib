@@ -2,8 +2,8 @@
 
 # @file tools/travis/start-xvfb.sh
 #
-# Copyright (c) 2014-2015 Simon Fraser University Library
-# Copyright (c) 2010-2015 John Willinsky
+# Copyright (c) 2014-2018 Simon Fraser University
+# Copyright (c) 2010-2018 John Willinsky
 # Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 #
 # Script to install and start xvfb.

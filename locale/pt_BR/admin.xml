@@ -4,15 +4,15 @@
 <!--
   * locale/pt_BR/admin.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_BR (Português (Brasil)) locale.
   *
   -->
 
-<locale name="pt_BR" full_name = "Português (Brasil)">
+<locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="admin.adminFunctions">Funções Administrativas</message>
 	<message key="admin.auth.confirmDelete">Deseja realmente excluir esta fonte de autenticação?</message>
 	<message key="admin.auth.create">Criar fonte de autenticação</message>
@@ -93,8 +93,13 @@
 	<message key="admin.scheduledTask.startTime">Tarefa iniciada.</message>
 	<message key="admin.scheduledTask.stopTime">Tarefa parada.</message>
 	<message key="admin.scheduledTask.noLog">Tarefa não produziu registros (logs).</message>
-	<message key="admin.scheduledTask.openAccessNotification">Notificação de acesso aberto</message>
 	<message key="admin.scheduledTask.reviewReminder">Lembrete de avaliador</message>
 	<message key="admin.scheduledTask.subscriptionExpiryReminder">Lembrete de expiração de assinatura.</message>
 	<message key="admin.fileLoader.fileProcessed">O arquivo {$filename} foi processado e arquivado.</message>
+	<message key="admin.scheduledTask.downloadLog">O sistema executou e conclui a tarefa automaticamente, e o arquivo de registro pode ser baixado aqui: {$url}</message>
+	<message key="admin.scheduledTask.confirmClearLogs">Deseja realmente excluir todos os registros de execução de tarefas agendadas?</message>
+	<message key="admin.scheduledTask.clearLogs">Limpar registros de execução de tarefas agendadas</message>
+	<message key="admin.scheduledTask.openAccessNotification">Notificação de acesso aberto</message>
+	<message key="admin.error.utilExecutionProblem">A execução do aplicativo "{$utilPath}" gerou o seguinte erro: {$output}</message>
+	<message key="admin.error.executingUtil">Erro: impossível executar "{$utilPath}".  Verifique a configuração {$utilVar} no arquivo config.inc.php.</message>
 </locale>

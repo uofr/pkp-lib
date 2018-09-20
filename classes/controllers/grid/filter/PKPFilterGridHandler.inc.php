@@ -3,8 +3,8 @@
 /**
  * @file classes/controllers/grid/filter/PKPFilterGridHandler.inc.php
  *
- * Copyright (c) 2013-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PKPFilterGridHandler
@@ -209,6 +209,7 @@ class PKPFilterGridHandler extends GridHandler {
 		$filterForm->initData($this->getGridDataElements($request));
 
 		$json = new JSONMessage(true, $filterForm->fetch($request));
+		header('Content-Type: application/json');
 		return $json->getString();
 	}
 
@@ -251,6 +252,7 @@ class PKPFilterGridHandler extends GridHandler {
 		}
 
 		// Return the serialized JSON response
+		header('Content-Type: application/json');
 		return $json->getString();
 	}
 
@@ -272,6 +274,7 @@ class PKPFilterGridHandler extends GridHandler {
 		} else {
 			$json = new JSONMessage(false, __('manager.setup.filter.grid.errorDeletingFilter'));
 		}
+		header('Content-Type: application/json');
 		return $json->getString();
 	}
 

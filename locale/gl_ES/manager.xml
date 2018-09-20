@@ -4,15 +4,15 @@
 <!--
   * locale/gl_ES/manager.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the gl_ES (Galego) locale.
   *
   -->
 
-<locale name="gl_ES" full_name = "Galego (Galiza)">
+<locale name="gl_ES" full_name="Galego">
 	<message key="manager.announcements">Anuncios</message>
 	<message key="manager.announcements.confirmDelete">Tes a certeza de querer borrar este anuncio permanentemente?</message>
 	<message key="manager.announcements.create">Crear novo anuncio</message>

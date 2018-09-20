@@ -4,15 +4,15 @@
 <!--
   * locale/fr_FR/manager.xml
   *
-  * Copyright (c) 2000-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2000-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_FR (Français (France)) locale.
   *
   -->
 
-<locale name="fr_FR" full_name = "Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<message key="manager.announcements">Annonces</message>
 	<message key="manager.announcements.confirmDelete">Êtes-vous certain de vouloir supprimer cette annonce de façon permanente?</message>
 	<message key="manager.announcements.create">Créer une nouvelle annonce</message>

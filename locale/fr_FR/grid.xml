@@ -4,15 +4,15 @@
 <!--
   * locale/fr_FR/grid.xml
   *
-  * Copyright (c) 2000-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2000-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the fr_FR locale.
   *
   -->
 
-<locale name="fr_FR" full_name = "Français">
+<locale name="fr_FR" full_name="Français (France)">
 	<!-- Common -->
 	<message key="grid.noItems">Aucun élément</message>
 	<message key="grid.settings">Paramètres</message>

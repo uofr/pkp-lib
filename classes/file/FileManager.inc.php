@@ -7,8 +7,8 @@
 /**
  * @file classes/file/FileManager.inc.php
  *
- * Copyright (c) 2013-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class FileManager
@@ -348,7 +348,11 @@ class FileManager {
 	 */
 	function mkdirtree($dirPath, $perms = null) {
 		if (!file_exists($dirPath)) {
-			if ($this->mkdirtree(dirname($dirPath), $perms)) {
+			//Avoid infinite recursion when file_exists reports false for root directory
+			if ($dirPath == dirname($dirPath)) {
+				fatalError('There are no readable files in this directory tree. Are safe mode or open_basedir active?');
+				return false;
+			} else if ($this->mkdirtree(dirname($dirPath), $perms)) {
 				return $this->mkdir($dirPath, $perms);
 			} else {
 				return false;
@@ -536,7 +540,75 @@ class FileManager {
 			$fileExtension = 'txt';
 		}
 
+		// consider .tar.gz extension
+		if (strtolower(substr($fileName, -7)) == '.tar.gz') {
+			$fileExtension = substr($fileName, -6);
+		}
+
 		return $fileExtension;
+	}
+
+	/**
+	 * Decompress passed gziped file.
+	 * @param $filePath string
+	 * @param $errorMsg string
+	 * @return boolean|string
+	 */
+	function decompressFile($filePath, &$errorMsg) {
+		return $this->_executeGzip($filePath, true, $errorMsg);
+	}
+
+	/**
+	 * Compress passed file.
+	 * @param $filePath string The file to be compressed.
+	 * @param $errorMsg string
+	 * @return boolean|string
+	 */
+	function compressFile($filePath, &$errorMsg) {
+		return $this->_executeGzip($filePath, false, $errorMsg);
+	}
+
+
+	//
+	// Private helper methods.
+	//
+	/**
+	 * Execute gzip to compress or extract files.
+	 * @param $filePath string file to be compressed or uncompressed.
+	 * @param $decompress boolean optional Set true if the passed file
+	 * needs to be decompressed.
+	 * @param $errorMsg string
+	 * @return false|string The file path that was created with the operation
+	 * or false in case of fail.
+	 */
+	function _executeGzip($filePath, $decompress = false, &$errorMsg) {
+		PKPLocale::requireComponents(LOCALE_COMPONENT_PKP_ADMIN);
+		$gzipPath = Config::getVar('cli', 'gzip');
+		if (!is_executable($gzipPath)) {
+			$errorMsg = __('admin.error.executingUtil', array('utilPath' => $gzipPath, 'utilVar' => 'gzip'));
+			return false;
+		}
+		$gzipCmd = escapeshellarg($gzipPath);
+		if ($decompress) $gzipCmd .= ' -d';
+		// Make sure any output message will mention the file path.
+		$output = array($filePath);
+		$returnValue = 0;
+		$gzipCmd .= ' ' . $filePath;
+		if (!Core::isWindows()) {
+			// Get the output, redirecting stderr to stdout.
+			$gzipCmd .= ' 2>&1';
+		}
+		exec($gzipCmd, $output, $returnValue);
+		if ($returnValue > 0) {
+			$errorMsg = __('admin.error.utilExecutionProblem', array('utilPath' => $gzipPath, 'output' => implode(PHP_EOL, $output)));
+			return false;
+		}
+
+		if ($decompress) {
+			return substr($filePath, 0, -3);
+		} else {
+			return $filePath . '.gz';
+		}
 	}
 }
 

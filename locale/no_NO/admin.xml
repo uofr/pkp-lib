@@ -4,15 +4,15 @@
 <!--
   * locale/no_NO/admin.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the no_NO (Norsk) locale.
   *
   -->
 
-<locale name="no_NO" full_name = "Norwegian">
+<locale name="no_NO" full_name="Norsk">
 	<message key="admin.adminFunctions">Administrative funksjoner</message>
 	<message key="admin.auth.confirmDelete">Er du sikker på at du vil slette denne valideringskilde for alltid?</message>
 	<message key="admin.auth.create">Opprett valideringskilde</message>

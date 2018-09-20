@@ -4,15 +4,15 @@
 <!--
   * locale/vi_VN/reader.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   -->
 
-<locale name="vi_VN" full_name = "Tiếng Việt">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="comments.anonymous">Bạn đọc giấu tên</message>
 	<message key="comments.anonymousNamed">"{$userName}"</message>
 	<message key="comments.body">Nội dung</message>

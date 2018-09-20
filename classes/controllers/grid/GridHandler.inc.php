@@ -3,8 +3,8 @@
 /**
  * @file classes/controllers/grid/GridHandler.inc.php
  *
- * Copyright (c) 2013-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class GridHandler
@@ -480,6 +480,7 @@ class GridHandler extends PKPHandler {
 
 		// Let the view render the grid.
 		$json = new JSONMessage(true, $templateMgr->fetch($this->getTemplate()));
+		header('Content-Type: application/json');
 		return $json->getString();
 	}
 
@@ -507,6 +508,7 @@ class GridHandler extends PKPHandler {
 		}
 
 		// Render and return the JSON message.
+		header('Content-Type: application/json');
 		return $json->getString();
 	}
 
@@ -529,6 +531,7 @@ class GridHandler extends PKPHandler {
 
 		// Render the cell
 		$json = new JSONMessage(true, $this->_renderCellInternally($request, $row, $column));
+		header('Content-Type: application/json');
 		return $json->getString();
 	}
 
@@ -729,6 +732,7 @@ class GridHandler extends PKPHandler {
 		$returner[] = array('label' => __('common.noMatches'), 'value' => '');
 
 		$json = new JSONMessage(true, $returner);
+		header('Content-Type: application/json');
 		return $json->getString();
 	}
 

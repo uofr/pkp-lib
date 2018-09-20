@@ -4,15 +4,15 @@
 <!--
   * locale/ml_IN/admin.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2000-2015 John Willinsky
+  * Copyright (c) 2013-2018 Simon Fraser University
+  * Copyright (c) 2000-2018 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the ml_IN (മലയാളം) locale.
   *
   -->
 
-<locale name="ml_IN" full_name = "Malayalam">
+<locale name="ml_IN" full_name="മലയാളം">
 	<message key="admin.adminFunctions">അഡ്മിനിസ്ട്രേറ്റീവ് ഫങ്ങ്ഷന്‍സ്</message>
 	<message key="admin.auth.confirmDelete">ഈ ആധികാരിക സ്രോതസ്സ് സ്ഥിരമായി മായ്ക്കണമെന്ന് താങ്കള്‍ക്ക് ഉറപ്പാണോ?</message>
 	<message key="admin.auth.create">ആധികാരിക സ്രോതസ്സ് സൃഷ്ടിക്കുക</message>

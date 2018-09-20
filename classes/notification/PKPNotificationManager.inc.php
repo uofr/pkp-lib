@@ -3,8 +3,8 @@
 /**
  * @file classes/notification/PKPNotificationManager.inc.php
  *
- * Copyright (c) 2013-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PKPNotificationManager
@@ -117,6 +117,7 @@ class PKPNotificationManager {
 		switch ($type) {
 			case NOTIFICATION_TYPE_SUCCESS:
 			case NOTIFICATION_TYPE_ERROR:
+			case NOTIFICATION_TYPE_WARNING:
 				if (!is_null($this->getNotificationSettings($notification->getId()))) {
 					$notificationSettings = $this->getNotificationSettings($notification->getId());
 					return $notificationSettings['contents'];

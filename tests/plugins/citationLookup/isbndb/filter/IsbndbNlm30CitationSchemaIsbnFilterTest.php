@@ -3,8 +3,8 @@
 /**
  * @file tests/plugins/citationLookup/isbndb/filter/IsbndbNlm30CitationSchemaIsbnFilterTest.inc.php
  *
- * Copyright (c) 2013-2015 Simon Fraser University Library
- * Copyright (c) 2000-2015 John Willinsky
+ * Copyright (c) 2013-2018 Simon Fraser University
+ * Copyright (c) 2000-2018 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class IsbndbNlm30CitationSchemaIsbnFilterTest
@@ -26,6 +26,8 @@ class IsbndbNlm30CitationSchemaIsbnFilterTest extends IsbndbNlm30CitationSchemaF
 	 * @covers IsbndbNlm30CitationSchemaFilter
 	 */
 	public function testExecute() {
+		$this->markTestSkipped('ISBNDB API key daily limit too low.');
+
 		// Test data
 		$isbnSearchTest = array(
 			'testInput' => array(
